@@ -1,0 +1,397 @@
+header{
+    height: 150px;
+    background-color: #2B2726 ;    
+    justify-content: center; 
+    font-size:30px
+}
+#todo{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 20px;
+}
+body{
+    background-color:#2B2726 ;
+}
+
+#title{
+    background-color:#7DAD93 ;
+}
+#frase{
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    color: #2B2726;
+    font-style: bold;
+}
+#descricao{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Arial, sans-serif; 
+    color: #2B2726;
+    font-weight: 300;
+}
+
+#btnComecar{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    font-size: 30px;
+    height: 70px;
+    width: 400px;
+    background-color:#2B2726 ;
+    color: white;
+    margin-top: 350px;
+    text-align: center;
+}
+
+#inicio {
+    height: 600px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #7DAD93; 
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+#opcoes {
+    background-color: #2B2726;
+    color: #FEE600;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    padding: 20px;
+    width: calc(100% - 450px); /* Largura total menos a largura do aside */
+    float: left; /* Alinha à esquerda */
+    box-sizing: border-box;
+    margin-top: 200px; /* Adicionando margem superior */
+}
+
+#asidemain {
+    background-color: #7DAD93;
+    padding: 20px;
+    width: 450px;
+    height: 100vh; /* Preenche a altura da tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#asidegeral {
+    background-color: #7DAD93;
+    padding: 20px;
+    width: 450px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: fixed; /* Torna o elemento fixo */
+    top: 0;
+    right: 0; /* Posiciona o elemento no lado direito */
+}
+
+aside button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px; /* Aumentando o tamanho da fonte */
+    margin-bottom: 20px; /* Reduzindo a margem inferior */
+    transition: background-color 0.3s;
+    border-radius: 50px; /* Ajustado para tornar os botões mais redondos */
+    padding: 20px 40px; /* Aumentando o preenchimento interno */
+    border: none; /* Removido contorno */
+    cursor: pointer;
+}
+
+aside button:hover {
+    background-color: #FEE600;
+    color: white;
+}
+
+.container {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    color: white;
+    padding: 0; 
+    position: relative;
+    margin-right: 450px; /* Adicionando margem à direita */
+}
+
+.content {
+    width: calc(100% - 450px); /* Largura total menos a largura do aside */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.box {
+    width: 45%; 
+    padding: 20px;
+    border-radius: 20px; 
+}
+input {
+    border-radius: 20px;
+    width: 90%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    margin-right: 450px; /* Adicionando margem à direita */
+}
+
+#btnAdicionarTarefa {
+    border-radius: 20px; 
+    padding: 15px; 
+    font-size: 28px; 
+    height: 70px;
+    width: 98%;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #7DAD93; 
+    color: black; 
+    border: none; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#btnCancelar {
+    border-radius: 20px; 
+    padding: 15px; 
+    font-size: 28px; 
+    height: 70px;
+    width: 98%;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #ad0000; 
+    color: white; 
+    border: none; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#btnAdicionarTarefa:hover {
+    background-color: #5c8d6e; /* Altera a cor de fundo ao passar o mouse */
+}
+
+#btnAdicionarTarefa:active {
+    background-color: #446d52; /* Altera a cor de fundo quando clicado */
+}
+.pesquisar {
+    display: flex; /* Define o contêiner como flexível */
+    align-items: right; /* Alinha os itens verticalmente */
+}
+
+#pesquisa {
+    border-radius: 30px; /* Adicionando borda arredondada apenas no canto esquerdo */
+    width: 98%;
+    align-items: right;
+    align-self: right;
+}
+
+.icone-pesquisa {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px; /* Adicionando um preenchimento ao botão para torná-lo mais clicável */
+    border-radius: 30px; /* Adicionando borda arredondada apenas no canto direito */
+}
+
+.icone-pesquisa img {
+    width: 100%;
+    height: auto;
+}
+
+select {
+    border-radius: 20px;
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#tarefa{
+    background-color:#2B2726 ;
+    color: #FEE600;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+}
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+th, td {
+    border: 1px solid #ffffff; 
+    padding: 8px; 
+    text-align: left; 
+}
+
+th {
+    background-color: #dddddd;
+
+}
+
+td {
+    color:white;
+}
+
+footer{
+    color:white;
+    justify-content: center;
+    
+}
+
+#btn-new-task {
+    border-radius: 50%; 
+    padding: 15px; 
+    font-size: 18px; 
+    height: 50px;  /* Ajuste a altura conforme necessário */
+    width: 50px;   /* Ajuste a largura conforme necessário */
+    border: none; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: grey;
+    color: white;
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Garante que o texto esteja centralizado */
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+#btn-new-task:hover{
+    background-color:#FEE600; 
+}
+
+#to-do-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+#to-do-list li{
+    list-style-type:none;
+    font-size:1.4rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#to-do-list li:hover{
+    background-color: black;
+    transition: .4s;
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
+#btn-ok{
+    border: none;
+    background-color: #7DAD93;
+    color:black;
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#btn-ok:hover{
+    background-color: #59cd8d;
+}
+
+#tarefasrapidas{
+    background-color: #2B2726;
+    color: #FEE600;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    padding: 20px;
+    margin-right: 450px; 
+}
+
+.content--add-item {
+    display: flex; /* Usar flexbox no contêiner pai */
+    align-items: center; /* Centraliza verticalmente */
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    color: white;
+    padding: 0; 
+    position: relative;
+    margin-right: 450px; /* Adicionando margem à direita */
+}
+#to-do-list{
+    background-color: #2B2726;
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    padding: 20px;
+    margin-right: 450px; 
+}
+#novatarefa{
+    background-color: #2B2726;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding: 20px;
+    margin-right: 450px; 
+}
+
+/* Media query para telas menores */
+@media only screen and (max-width: 768px) {
+    #btnComecar {
+        width: 90%;
+    }
+    
+    #inicio {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #opcoes {
+        width: 100%;
+        float: none;
+        margin-top: 20px;
+    }
+    
+    #asidemain {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        right: auto;
+        display: block;
+    }
+    
+    aside button {
+        padding: 15px 30px;
+    }
+}
+
+/* Media query para telas muito pequenas */
+@media only screen and (max-width: 480px) {
+    #btnComecar {
+        font-size: 24px;
+    }
+    
+    #opcoes {
+        font-size: 40px;
+    }
+    
+    #asidemain {
+        padding: 10px;
+    }
+    
+    /* Ajustes para telas muito pequenas */
+    #frase {
+        font-size: 40px;
+    }
+    
+    #descricao {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/pessoal.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Pessoal</title>
+</head>
+<body>
+    <h1 id="tarefa">Tarefa Pessoal</h1>
+    <section class="content">
+        <div class="container">
+            <div class="box" id="lado-esquerdo">
+                <label for="titulo">Título:<br></label>
+                <input id="titulo" type="text"><br>
+                <label for="datavencimento">Data de Vencimento:<br></label>
+                <input id="datavencimento" type="date"><br>
+                <label for="status">Status:<br></label>
+                <select id="status">
+                    <option value="Pendente">Pendente</option>
+                    <option value="Encerrada">Encerrada</option>
+                </select>
+            </div>
+            
+            <div class="box" id="lado-direito">
+                <label for="descricao">Descrição:<br></label>
+                <input id="descricao" type="text"><br>
+                <label for="prioridade">Prioridade:<br></label>
+                <select id="prioridade">
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+                <label for="categoria">Categoria:<br></label>
+                <input id="categoria" type="text"><br>
+            </div>
+        </div>
+        <div id="mensagem" style="display:none;"></div>
+        <button id="btnAdicionarTarefa" type="button">ADICIONAR TAREFA</button>
+        <button id="btnCancelar" type="button">CANCELAR</button>
+        <div class="pesquisar">
+            <input id="pesquisa" type="search" placeholder="Pesquisar...">
+        </div>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                    <th>Prioridade</th>
+                    <th>Categoria</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+    <aside id="asidegeral">
+        <a href="../html/pessoal.html"><button id="btnpessoal" type="button">Pessoal</button></a>
+        <a href="../html/profissional.html"><button id="btnprofissional" type="button">Profissional</button></a>
+        <a href="../html/academica.html"><button id="btnacademica" type="button">Acadêmica</button></a>
+        <a href="../html/rapidas.html"><button id="btnacademica" type="button">Rápidas</button></a>
+        <a href="../index.html"><button id="btmain" type="button">Página inicial</button></a>
+    </aside>
+</body>
+</html>

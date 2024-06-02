@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Tarefas Rápidas</title>
+</head>
+<body>
+    <h1 id="tarefasrapidas">Tarefas Rápidas</h1>
+    <h2 id="novatarefa">Criar nova Tarefa</h2>
+    <div class="content">
+        <div class="content--add-item">
+            
+            <input type="text" id="input-new-task" placeholder="Criar nova tarefa">
+            <button onclick="newTask()" id="btn-new-task" title="Clique aqui para adicionar uma nova task">+</button>
+        </div>
+        <div class="content--body">
+            <ol id="to-do-list">
+            </ol>
+        </div>
+    </div>
+    <aside id="asidegeral">
+        <a href="../html/pessoal.html"><button id="btnpessoal" type="button">Pessoal</button></a>
+        <a href="../html/profissional.html"><button id="btnprofissional" type="button">Profissional</button></a>
+        <a href="../html/academica.html"><button id="btnacademica" type="button">Acadêmica</button></a>
+        <a href="../html/rapidas.html"><button id="btnacademica" type="button">Rápidas</button></a>
+        <a href="../index.html"><button id="btmain" type="button">Página inicial</button></a>
+    </aside>
+</body>
+<script src="../js/rapidas.js"></script>
+</html>
