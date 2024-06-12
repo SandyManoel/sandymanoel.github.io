@@ -20,7 +20,6 @@ body{
     font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 70px;
     color: #2B2726;
-    font-style: bold;
 }
 #descricao{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Arial, sans-serif; 
@@ -57,17 +56,17 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 70px;
     padding: 20px;
-    width: calc(100% - 450px); /* Largura total menos a largura do aside */
-    float: left; /* Alinha à esquerda */
+    width: calc(100% - 450px); 
+    float: left; 
     box-sizing: border-box;
-    margin-top: 200px; /* Adicionando margem superior */
+    margin-top: 200px;
 }
 
 #asidemain {
     background-color: #7DAD93;
     padding: 20px;
     width: 450px;
-    height: 100vh; /* Preenche a altura da tela */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,9 +84,10 @@ body{
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    position: fixed; /* Torna o elemento fixo */
+    position: fixed; 
     top: 0;
-    right: 0; /* Posiciona o elemento no lado direito */
+    right: 0; 
+    max-width: 450px; 
 }
 
 aside button {
@@ -121,7 +121,7 @@ aside button:hover {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .box {
-    width: 45%; 
+    width: 60%; 
     padding: 20px;
     border-radius: 20px; 
 }
@@ -174,27 +174,11 @@ input {
 }
 .pesquisar {
     display: flex; /* Define o contêiner como flexível */
-    align-items: right; /* Alinha os itens verticalmente */
 }
 
 #pesquisa {
     border-radius: 30px; /* Adicionando borda arredondada apenas no canto esquerdo */
     width: 98%;
-    align-items: right;
-    align-self: right;
-}
-
-.icone-pesquisa {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 10px; /* Adicionando um preenchimento ao botão para torná-lo mais clicável */
-    border-radius: 30px; /* Adicionando borda arredondada apenas no canto direito */
-}
-
-.icone-pesquisa img {
-    width: 100%;
-    height: auto;
 }
 
 select {
@@ -240,19 +224,19 @@ footer{
     border-radius: 50%; 
     padding: 15px; 
     font-size: 18px; 
-    height: 50px;  /* Ajuste a altura conforme necessário */
-    width: 50px;   /* Ajuste a largura conforme necessário */
+    height: 50px; 
+    width: 50px;  
     border: none; 
     cursor: pointer;
     transition: background-color 0.3s;
     background-color: grey;
     color: white;
-    display: flex; /* Usar flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    text-align: center; /* Garante que o texto esteja centralizado */
-    display: flex; /* Usar flexbox */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    display: flex;
+    align-items: center; 
 }
 
 #btn-new-task:hover{
@@ -314,7 +298,6 @@ footer{
 .content--add-item {
     display: flex; /* Usar flexbox no contêiner pai */
     align-items: center; /* Centraliza verticalmente */
-    display: flex; 
     justify-content: space-between; 
     width: 100%; 
     color: white;
@@ -340,58 +323,89 @@ footer{
     margin-right: 450px; 
 }
 
-/* Media query para telas menores */
 @media only screen and (max-width: 768px) {
-    #btnComecar {
-        width: 90%;
-    }
-    
-    #inicio {
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #opcoes {
-        width: 100%;
-        float: none;
-        margin-top: 20px;
-    }
-    
-    #asidemain {
-        position: relative;
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
-        right: auto;
-        display: block;
-    }
-    
+    /* Button styles for #btnComecar and aside buttons */
+    #btnComecar,
     aside button {
-        padding: 15px 30px;
+      padding: 15px 30px; /* Adjust padding if needed */
+      font-size: 24px; /* Adjust font size for smaller screens */
     }
-}
-
-/* Media query para telas muito pequenas */
-@media only screen and (max-width: 480px) {
-    #btnComecar {
-        font-size: 24px;
+  
+    #inicio {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
     }
-    
-    #opcoes {
-        font-size: 40px;
+  
+    #opcoes,
+    #asidegeral { /* Combine styles for #opcoes and #asidegeral */
+      width: 100%;
+      margin-top: 20px;
     }
-    
-    #asidemain {
-        padding: 10px;
+  
+    input,
+    select {
+      min-width: 100px;
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      box-sizing: border-box;
     }
-    
-    /* Ajustes para telas muito pequenas */
+  
+    #pesquisar {
+      width: 80%;
+      max-width: 300px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+    #btn-new-task {
+      font-size: 3vw; /* Font size relative to viewport width */
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    #btnComecar,
+    aside button {
+      font-size: 20px; /* Adjust font size for very small screens */
+      padding: 10px 20px; /* Adjust padding if needed */
+    }
+  
     #frase {
-        font-size: 40px;
+      font-size: 40px; /* Adjust font size as needed */
     }
-    
+  
     #descricao {
-        font-size: 20px;
+      font-size: 20px; /* Adjust font size as needed */
     }
-}
+  
+    input {
+      min-width: 200px;
+      max-width: 300px;
+      width: 80%; /* 80% of screen width */
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+    #btnAdicionarTarefa,
+    #btnCancelar,
+    #btnComecar,
+    #btn-new-task {
+      width: 90%; /* 90% of screen width */
+      min-width: 100px;
+      font-size: inherit; /* Inherit font size from parent */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    #btn-new-task span {
+      font-size: inherit; /* Inherit font size from parent */
+    }
+    #asidegeral {
+        width: 60%; /* Adjust width as needed */
+      }
+  }
