@@ -57,17 +57,17 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 70px;
     padding: 20px;
-    width: calc(100% - 450px); /* Largura total menos a largura do aside */
-    float: left; /* Alinha à esquerda */
+    width: calc(100% - 450px); 
+    float: left;
     box-sizing: border-box;
-    margin-top: 200px; /* Adicionando margem superior */
+    margin-top: 200px; 
 }
 
 #asidemain {
     background-color: #7DAD93;
     padding: 20px;
     width: 450px;
-    height: 100vh; /* Preenche a altura da tela */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,19 +85,19 @@ body{
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    position: fixed; /* Torna o elemento fixo */
+    position: fixed;
     top: 0;
-    right: 0; /* Posiciona o elemento no lado direito */
+    right: 0; 
 }
 
 aside button {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 24px; /* Aumentando o tamanho da fonte */
-    margin-bottom: 20px; /* Reduzindo a margem inferior */
+    font-size: 24px;
+    margin-bottom: 20px; 
     transition: background-color 0.3s;
-    border-radius: 50px; /* Ajustado para tornar os botões mais redondos */
-    padding: 20px 40px; /* Aumentando o preenchimento interno */
-    border: none; /* Removido contorno */
+    border-radius: 50px; 
+    padding: 20px 40px; 
+    border: none; 
     cursor: pointer;
 }
 
@@ -113,11 +113,11 @@ aside button:hover {
     color: white;
     padding: 0; 
     position: relative;
-    margin-right: 450px; /* Adicionando margem à direita */
+    margin-right: 450px; 
 }
 
 .content {
-    width: calc(100% - 450px); /* Largura total menos a largura do aside */
+    width: calc(100% - 450px); 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .box {
@@ -130,7 +130,7 @@ input {
     width: 90%; 
     padding: 10px; 
     margin-bottom: 10px; 
-    margin-right: 450px; /* Adicionando margem à direita */
+    margin-right: 450px;
 }
 
 #btnAdicionarTarefa {
@@ -166,19 +166,19 @@ input {
 }
 
 #btnAdicionarTarefa:hover {
-    background-color: #5c8d6e; /* Altera a cor de fundo ao passar o mouse */
+    background-color: #5c8d6e; 
 }
 
 #btnAdicionarTarefa:active {
-    background-color: #446d52; /* Altera a cor de fundo quando clicado */
+    background-color: #446d52; 
 }
 .pesquisar {
-    display: flex; /* Define o contêiner como flexível */
-    align-items: right; /* Alinha os itens verticalmente */
+    display: flex; 
+    align-items: right; 
 }
 
 #pesquisa {
-    border-radius: 30px; /* Adicionando borda arredondada apenas no canto esquerdo */
+    border-radius: 30px; 
     width: 98%;
     align-items: right;
     align-self: right;
@@ -188,8 +188,8 @@ input {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    padding: 10px; /* Adicionando um preenchimento ao botão para torná-lo mais clicável */
-    border-radius: 30px; /* Adicionando borda arredondada apenas no canto direito */
+    padding: 10px; 
+    border-radius: 30px; 
 }
 
 .icone-pesquisa img {
@@ -240,19 +240,19 @@ footer{
     border-radius: 50%; 
     padding: 15px; 
     font-size: 18px; 
-    height: 50px;  /* Ajuste a altura conforme necessário */
-    width: 50px;   /* Ajuste a largura conforme necessário */
+    height: 50px;  
+    width: 50px;   
     border: none; 
     cursor: pointer;
     transition: background-color 0.3s;
     background-color: grey;
     color: white;
-    display: flex; /* Usar flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    text-align: center; /* Garante que o texto esteja centralizado */
-    display: flex; /* Usar flexbox */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
 }
 
 #btn-new-task:hover{
@@ -312,16 +312,17 @@ footer{
 }
 
 .content--add-item {
-    display: flex; /* Usar flexbox no contêiner pai */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex; 
+    align-items: center; 
     display: flex; 
     justify-content: space-between; 
     width: 100%; 
     color: white;
     padding: 0; 
     position: relative;
-    margin-right: 450px; /* Adicionando margem à direita */
+    margin-right: 450px; 
 }
+
 #to-do-list{
     background-color: #2B2726;
     color: white;
@@ -374,6 +375,82 @@ footer{
 
 /* Media query para telas muito pequenas */
 @media only screen and (max-width: 768px) {
+    #btnComecar,
+    aside button {
+        padding: 15px 30px;
+        font-size: 24px;
+    }
+
+    #inicio {
+        height: auto;
+        flex-direction: column;
+    }
+
+    #frase {
+        font-size: 50px;
+    }
+
+    #descricao {
+        font-size: 25px;
+    }
+
+    #asidemain,
+    #asidegeral {
+        width: 100%;
+        height: auto;
+        position: static;
+        max-width: none;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-right: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .content,
+    .content--add-item {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #tarefasrapidas {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #opcoes {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    #novatarefa {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #to-do-list li {
+        font-size: 1.2rem;
+    }
+
+    header {
+        height: 100px;
+        font-size: 24px;
+    }
+
+    #btn-new-task {
+        height: 40px;
+        width: 40px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
     #btnComecar,
     aside button {
         padding: 15px 30px;
