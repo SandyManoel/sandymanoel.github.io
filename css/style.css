@@ -20,6 +20,7 @@ body{
     font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 70px;
     color: #2B2726;
+    font-style: bold;
 }
 #descricao{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Arial, sans-serif; 
@@ -56,17 +57,17 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 70px;
     padding: 20px;
-    width: calc(100% - 450px); 
-    float: left; 
+    width: calc(100% - 450px); /* Largura total menos a largura do aside */
+    float: left; /* Alinha à esquerda */
     box-sizing: border-box;
-    margin-top: 200px;
+    margin-top: 200px; /* Adicionando margem superior */
 }
 
 #asidemain {
     background-color: #7DAD93;
     padding: 20px;
     width: 450px;
-    height: 100vh; 
+    height: 100vh; /* Preenche a altura da tela */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,10 +85,9 @@ body{
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    position: fixed; 
+    position: fixed; /* Torna o elemento fixo */
     top: 0;
-    right: 0; 
-    max-width: 450px; 
+    right: 0; /* Posiciona o elemento no lado direito */
 }
 
 aside button {
@@ -121,7 +121,7 @@ aside button:hover {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .box {
-    width: 60%; 
+    width: 45%; 
     padding: 20px;
     border-radius: 20px; 
 }
@@ -174,11 +174,27 @@ input {
 }
 .pesquisar {
     display: flex; /* Define o contêiner como flexível */
+    align-items: right; /* Alinha os itens verticalmente */
 }
 
 #pesquisa {
     border-radius: 30px; /* Adicionando borda arredondada apenas no canto esquerdo */
     width: 98%;
+    align-items: right;
+    align-self: right;
+}
+
+.icone-pesquisa {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px; /* Adicionando um preenchimento ao botão para torná-lo mais clicável */
+    border-radius: 30px; /* Adicionando borda arredondada apenas no canto direito */
+}
+
+.icone-pesquisa img {
+    width: 100%;
+    height: auto;
 }
 
 select {
@@ -224,19 +240,19 @@ footer{
     border-radius: 50%; 
     padding: 15px; 
     font-size: 18px; 
-    height: 50px; 
-    width: 50px;  
+    height: 50px;  /* Ajuste a altura conforme necessário */
+    width: 50px;   /* Ajuste a largura conforme necessário */
     border: none; 
     cursor: pointer;
     transition: background-color 0.3s;
     background-color: grey;
     color: white;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-    display: flex;
-    align-items: center; 
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Garante que o texto esteja centralizado */
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 #btn-new-task:hover{
@@ -298,6 +314,7 @@ footer{
 .content--add-item {
     display: flex; /* Usar flexbox no contêiner pai */
     align-items: center; /* Centraliza verticalmente */
+    display: flex; 
     justify-content: space-between; 
     width: 100%; 
     color: white;
@@ -323,89 +340,111 @@ footer{
     margin-right: 450px; 
 }
 
+/* Media query para telas menores */
 @media only screen and (max-width: 768px) {
-    /* Button styles for #btnComecar and aside buttons */
-    #btnComecar,
-    aside button {
-      padding: 15px 30px; /* Adjust padding if needed */
-      font-size: 24px; /* Adjust font size for smaller screens */
+    #btnComecar {
+        width: 90%;
     }
-  
+    
     #inicio {
-      height: auto;
-      flex-direction: column;
-      align-items: center;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
     }
-  
-    #opcoes,
-    #asidegeral { /* Combine styles for #opcoes and #asidegeral */
-      width: 100%;
-      margin-top: 20px;
+    
+    #opcoes {
+        width: 100%;
+        float: none;
+        margin-top: 20px;
     }
-  
-    input,
-    select {
-      min-width: 100px;
-      width: 100%;
-      max-width: 300px;
-      padding: 10px;
-      box-sizing: border-box;
+    
+    #asidemain {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        right: auto;
+        display: block;
     }
-  
-    #pesquisar {
-      width: 80%;
-      max-width: 300px;
-      padding: 10px;
-      box-sizing: border-box;
+    
+    aside button {
+        padding: 15px 30px;
     }
-  
-    #btn-new-task {
-      font-size: 3vw; /* Font size relative to viewport width */
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-    }
-  }
-  
-  @media only screen and (max-width: 480px) {
+}
+
+/* Media query para telas muito pequenas */
+@media only screen and (max-width: 768px) {
     #btnComecar,
     aside button {
-      font-size: 20px; /* Adjust font size for very small screens */
-      padding: 10px 20px; /* Adjust padding if needed */
+        padding: 15px 30px;
+        font-size: 24px;
     }
-  
+
+    #inicio {
+        height: auto;
+        flex-direction: column;
+    }
+
     #frase {
-      font-size: 40px; /* Adjust font size as needed */
+        font-size: 50px;
     }
-  
+
     #descricao {
-      font-size: 20px; /* Adjust font size as needed */
+        font-size: 25px;
     }
-  
-    input {
-      min-width: 200px;
-      max-width: 300px;
-      width: 80%; /* 80% of screen width */
-      padding: 10px;
-      box-sizing: border-box;
-    }
-  
-    #btnAdicionarTarefa,
-    #btnCancelar,
-    #btnComecar,
-    #btn-new-task {
-      width: 90%; /* 90% of screen width */
-      min-width: 100px;
-      font-size: inherit; /* Inherit font size from parent */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    #btn-new-task span {
-      font-size: inherit; /* Inherit font size from parent */
-    }
+
+    #asidemain,
     #asidegeral {
-        width: 60%; /* Adjust width as needed */
-      }
-  }
+        width: 100%;
+        height: auto;
+        position: static;
+        max-width: none;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-right: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .content,
+    .content--add-item {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #tarefasrapidas {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #opcoes {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    #novatarefa {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #to-do-list li {
+        font-size: 1.2rem;
+    }
+
+    header {
+        height: 100px;
+        font-size: 24px;
+    }
+
+    #btn-new-task {
+        height: 40px;
+        width: 40px;
+        font-size: 16px;
+    }
+}
